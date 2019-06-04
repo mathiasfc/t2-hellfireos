@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include <hellfire.h>
 #include "labyrinth.h"
 
 void show(int *m, int lin, int col)
@@ -90,8 +90,7 @@ int solve(int *m, int lin, int col, int si, int sj, int ei, int ej)
 	return search(m, si, sj, ei, ej, lin, col);
 }
 
-int main(void)
-{
+void task(void){
 	struct maze_s *m;
 	int i, s, k = 0;
 
@@ -103,9 +102,13 @@ int main(void)
 			k++;
 		} else {
 			printf("\nERROR!\n");
-		};
-	};
+		}
+	}
 	printf("\nsummary: %d of %d solved\n", k, i);
+	
+	for(;;);
+}
 
-	return 0;
+void app_main(void){
+	hf_spawn(task, 0, 0, 0, "Solve mazes", 6000);
 }
