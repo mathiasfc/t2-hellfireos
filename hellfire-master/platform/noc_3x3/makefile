@@ -43,23 +43,4 @@ images:
 
 clean:
 	rm -rf *.o *~ *.elf *.bin *.cnt *.lst *.sec *.txt
-sergio:
-	rm -rf *.o *~ *.elf *.bin *.cnt *.lst *.sec *.txt;
-	make hal
-	make libc
-	for i in $(CORE_LIST) ; do \
-		echo "Building image for core $$i.."; \
-		make noc CORE="$$i" && \
-		make kernel CORE="$$i" && \
-		make app CORE="$$i" && \
-		$(LD) $(LDFLAGS) -T$(LINKER_SCRIPT) -o code$$i.elf *.o && \
-		$(DUMP) --disassemble --reloc code$$i.elf > code$$i.lst && \
-		$(DUMP) -h code$$i.elf > code$$i.sec && \
-		$(DUMP) -s code$$i.elf > code$$i.cnt && \
-		$(OBJ) -O binary code$$i.elf code$$i.bin && \
-		$(SIZE) code$$i.elf && \
-		hexdump -v -e '4/1 "%02x" "\n"' code$$i.bin > code$$i.txt \
-	;done
-	cp *.bin ../../usr/sim/mpsoc_sim/objects;
-
 

@@ -2,4 +2,4 @@ APP_DIR = $(SRC_DIR)/$(APP)
 
 app: kernel
 	$(CC) $(CFLAGS) \
-		$(APP_DIR)/labyrinth.c 
+		$(APP_DIR)/labyrinth.c
