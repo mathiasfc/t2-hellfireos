@@ -1,4 +1,5 @@
 #include <hellfire.h>
+#include <stdbool.h>
 #include "labyrinth.h"
 
 void show(int *m, int lin, int col)
@@ -90,25 +91,96 @@ int solve(int *m, int lin, int col, int si, int sj, int ei, int ej)
 	return search(m, si, sj, ei, ej, lin, col);
 }
 
-void task(void){
+// task_master() eh usada pelo master para enviar mazes aos slaves
+void task_master(void){
 	struct maze_s *m;
-	int i, s, k = 0;
+	int i = 0;
+	// Variaveis para receber dados dos slaves
+	int8_t cpu_slave[4];
+	int16_t size_cpu_slave;
+	int16_t port_slave;
+	int16_t my_cpu, my_port;
+	int8_t buf[512];
 
-	for (i = 0; i < sizeof(mazes) / sizeof(struct maze_s); i++) {
+	printf("\n\n----CPU[%d] - MASTER----\n\n", hf_cpuid());
+
+	// Cria a id e porta da thread master
+	hf_comm_create(0, 10000, 0);
+
+	// Itera pelos mazes
+	for (i = 0; i < sizeof(mazes) / sizeof(struct maze_s); i++){
+
+		// Espera um slave enviar uma msg dizendo que esta livre
+		hf_recv(&my_cpu, &my_port, buf, &size_cpu_slave, 0);
+
+		printf("\nCPU recebida do escravo = %s", buf);
+		// Monta a porta conforme CPU recebida
+		port_slave = 10000 + cpu_slave;
+
+		printf("\nCPU SLAVE: %d\n PORT SLAVE: %d\n\n", cpu_slave, port_slave);
+
+		// Pega o proximo maze a ser resolvido
 		m = &mazes[i];
-		s = solve(m->maze, m->lines, m->columns, m->start_line, m->start_col, m->end_line, m->end_col);
-		if (s) {
-			printf("\nOK!\n");
-			k++;
-		} else {
-			printf("\nERROR!\n");
-		}
+
+		// Envia ao slave um maze para ser resolvido
+		hf_send(cpu_slave, port_slave, m, sizeof(m), 0);
+
+		printf("\nMaze %d enviado ao CPU[%d]", i, cpu_slave);
 	}
-	printf("\nsummary: %d of %d solved\n", k, i);
-	
+
 	for(;;);
 }
 
+// task() eh usada pelos slaves para resolver mazes
+void task(void){
+	struct maze_s *m;
+	int8_t buf[512];
+	uint16_t size;
+	int i, s, k = 0;
+	int16_t cpu_id;
+	int16_t my_cpu, my_port;
+	int8_t msg[4]; //montando assim pra teste
+
+	// Monta CPU
+	cpu_id = hf_cpuid();
+
+	printf("\n\n----CPU[%d] - MAZE SOLVER----\n\n", cpu_id);
+
+	// Monta a msg, que sera sempre a CPU_ID do escravo
+	strcpy(buf, "hello world!");
+
+
+	// Cria a id e porta da thread slave
+	hf_comm_create(cpu_id, (10000 + cpu_id), 0);
+
+	m = (struct mase_s *)&buf;
+
+	// Itera infinitamente
+	while(1){
+
+		// Envia ao master uma msg dizendo que esta livre
+		hf_send(0, 10000, buf, strlen(buf) + 1, 0);
+
+		// Espera retorno do master com o maze
+		hf_recv(&my_cpu, &my_port, (int8_t *)m, &size, 0);
+
+		// Resolve o maze
+		s = solve(m->maze, m->lines, m->columns, m->start_line, m->start_col, m->end_line, m->end_col);
+
+		if (s) {
+			printf("\nOK! Maze resolvido!\n");
+			k++;
+		} else {
+			printf("ERRO!\n");
+		}		
+	}
+	printf("\nsummary: %d mazes were solved\n", k);
+}
+
 void app_main(void){
-	hf_spawn(task, 0, 0, 0, "Solve mazes", 6000);
+	if(hf_cpuid() == 0){
+		hf_spawn(task_master, 0, 0, 0, "Master send mazes", 6000);
+	}else if (hf_cpuid() == 1) {
+		hf_spawn(task, 0, 0, 0, "Slaves solve mazes", 6000);
+	}
 }
