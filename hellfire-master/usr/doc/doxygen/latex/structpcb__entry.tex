@@ -1,0 +1,65 @@
+\hypertarget{structpcb__entry}{}\section{pcb\+\_\+entry Struct Reference}
+\label{structpcb__entry}\index{pcb\+\_\+entry@{pcb\+\_\+entry}}
+
+
+{\ttfamily \#include $<$kernel.\+h$>$}
+
+\subsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+int32\+\_\+t($\ast$ \hyperlink{structpcb__entry_afed67ff0db4482a197f9f98085c29724}{sched\+\_\+rt} )()
+\item 
+int32\+\_\+t($\ast$ \hyperlink{structpcb__entry_ab1848ecd2c321b6a19e80f0148beb053}{sched\+\_\+be} )()
+\item 
+uint32\+\_\+t \hyperlink{structpcb__entry_ac5899befd89fa0e8b2aeceed85e01415}{coop\+\_\+cswitch}
+\item 
+uint32\+\_\+t \hyperlink{structpcb__entry_af49c7195c79f5de2d70825e2252c8d77}{preempt\+\_\+cswitch}
+\item 
+uint32\+\_\+t \hyperlink{structpcb__entry_ae5474e1d477335caf5515d8a940d1f77}{interrupts}
+\item 
+uint32\+\_\+t \hyperlink{structpcb__entry_a998d1bf7b5ac3d6b0b9c4c6c7a0ebec6}{tick\+\_\+time}
+\end{DoxyCompactItemize}
+
+
+\subsection{Field Documentation}
+\mbox{\Hypertarget{structpcb__entry_ac5899befd89fa0e8b2aeceed85e01415}\label{structpcb__entry_ac5899befd89fa0e8b2aeceed85e01415}} 
+\index{pcb\+\_\+entry@{pcb\+\_\+entry}!coop\+\_\+cswitch@{coop\+\_\+cswitch}}
+\index{coop\+\_\+cswitch@{coop\+\_\+cswitch}!pcb\+\_\+entry@{pcb\+\_\+entry}}
+\subsubsection{\texorpdfstring{coop\+\_\+cswitch}{coop\_cswitch}}
+{\footnotesize\ttfamily uint32\+\_\+t pcb\+\_\+entry\+::coop\+\_\+cswitch}
+
+cooperative context switches \mbox{\Hypertarget{structpcb__entry_ae5474e1d477335caf5515d8a940d1f77}\label{structpcb__entry_ae5474e1d477335caf5515d8a940d1f77}} 
+\index{pcb\+\_\+entry@{pcb\+\_\+entry}!interrupts@{interrupts}}
+\index{interrupts@{interrupts}!pcb\+\_\+entry@{pcb\+\_\+entry}}
+\subsubsection{\texorpdfstring{interrupts}{interrupts}}
+{\footnotesize\ttfamily uint32\+\_\+t pcb\+\_\+entry\+::interrupts}
+
+number of non-\/masked interrupts \mbox{\Hypertarget{structpcb__entry_af49c7195c79f5de2d70825e2252c8d77}\label{structpcb__entry_af49c7195c79f5de2d70825e2252c8d77}} 
+\index{pcb\+\_\+entry@{pcb\+\_\+entry}!preempt\+\_\+cswitch@{preempt\+\_\+cswitch}}
+\index{preempt\+\_\+cswitch@{preempt\+\_\+cswitch}!pcb\+\_\+entry@{pcb\+\_\+entry}}
+\subsubsection{\texorpdfstring{preempt\+\_\+cswitch}{preempt\_cswitch}}
+{\footnotesize\ttfamily uint32\+\_\+t pcb\+\_\+entry\+::preempt\+\_\+cswitch}
+
+preeptive context switches \mbox{\Hypertarget{structpcb__entry_ab1848ecd2c321b6a19e80f0148beb053}\label{structpcb__entry_ab1848ecd2c321b6a19e80f0148beb053}} 
+\index{pcb\+\_\+entry@{pcb\+\_\+entry}!sched\+\_\+be@{sched\+\_\+be}}
+\index{sched\+\_\+be@{sched\+\_\+be}!pcb\+\_\+entry@{pcb\+\_\+entry}}
+\subsubsection{\texorpdfstring{sched\+\_\+be}{sched\_be}}
+{\footnotesize\ttfamily int32\+\_\+t($\ast$ pcb\+\_\+entry\+::sched\+\_\+be) ()}
+
+pointer to the best effort scheduler \mbox{\Hypertarget{structpcb__entry_afed67ff0db4482a197f9f98085c29724}\label{structpcb__entry_afed67ff0db4482a197f9f98085c29724}} 
+\index{pcb\+\_\+entry@{pcb\+\_\+entry}!sched\+\_\+rt@{sched\+\_\+rt}}
+\index{sched\+\_\+rt@{sched\+\_\+rt}!pcb\+\_\+entry@{pcb\+\_\+entry}}
+\subsubsection{\texorpdfstring{sched\+\_\+rt}{sched\_rt}}
+{\footnotesize\ttfamily int32\+\_\+t($\ast$ pcb\+\_\+entry\+::sched\+\_\+rt) ()}
+
+pointer to the realtime scheduler \mbox{\Hypertarget{structpcb__entry_a998d1bf7b5ac3d6b0b9c4c6c7a0ebec6}\label{structpcb__entry_a998d1bf7b5ac3d6b0b9c4c6c7a0ebec6}} 
+\index{pcb\+\_\+entry@{pcb\+\_\+entry}!tick\+\_\+time@{tick\+\_\+time}}
+\index{tick\+\_\+time@{tick\+\_\+time}!pcb\+\_\+entry@{pcb\+\_\+entry}}
+\subsubsection{\texorpdfstring{tick\+\_\+time}{tick\_time}}
+{\footnotesize\ttfamily uint32\+\_\+t pcb\+\_\+entry\+::tick\+\_\+time}
+
+tick time in microsseconds 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+sys/include/\hyperlink{kernel_8h}{kernel.\+h}\end{DoxyCompactItemize}

@@ -1,0 +1,49 @@
+\hypertarget{structmtx}{}\section{mtx Struct Reference}
+\label{structmtx}\index{mtx@{mtx}}
+
+
+Mutex data structure.  
+
+
+
+
+{\ttfamily \#include $<$mutex.\+h$>$}
+
+\subsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+int32\+\_\+t \hyperlink{structmtx_a5c9abfe5d985f974f920b19b94890f40}{lock}
+\item 
+uint8\+\_\+t \hyperlink{structmtx_ab13e9d09a96e18160571b960e4e7c1fb}{level} \mbox{[}M\+A\+X\+\_\+\+T\+A\+S\+KS\mbox{]}
+\item 
+uint8\+\_\+t \hyperlink{structmtx_a14e1d218cc3d0cd3e74ae6de1eb69212}{waiting} \mbox{[}M\+A\+X\+\_\+\+T\+A\+S\+KS -\/ 1\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Mutex data structure. 
+
+\subsection{Field Documentation}
+\mbox{\Hypertarget{structmtx_ab13e9d09a96e18160571b960e4e7c1fb}\label{structmtx_ab13e9d09a96e18160571b960e4e7c1fb}} 
+\index{mtx@{mtx}!level@{level}}
+\index{level@{level}!mtx@{mtx}}
+\subsubsection{\texorpdfstring{level}{level}}
+{\footnotesize\ttfamily uint8\+\_\+t mtx\+::level\mbox{[}M\+A\+X\+\_\+\+T\+A\+S\+KS\mbox{]}}
+
+\mbox{\Hypertarget{structmtx_a5c9abfe5d985f974f920b19b94890f40}\label{structmtx_a5c9abfe5d985f974f920b19b94890f40}} 
+\index{mtx@{mtx}!lock@{lock}}
+\index{lock@{lock}!mtx@{mtx}}
+\subsubsection{\texorpdfstring{lock}{lock}}
+{\footnotesize\ttfamily int32\+\_\+t mtx\+::lock}
+
+mutex lock, atomically modified \mbox{\Hypertarget{structmtx_a14e1d218cc3d0cd3e74ae6de1eb69212}\label{structmtx_a14e1d218cc3d0cd3e74ae6de1eb69212}} 
+\index{mtx@{mtx}!waiting@{waiting}}
+\index{waiting@{waiting}!mtx@{mtx}}
+\subsubsection{\texorpdfstring{waiting}{waiting}}
+{\footnotesize\ttfamily uint8\+\_\+t mtx\+::waiting\mbox{[}M\+A\+X\+\_\+\+T\+A\+S\+KS -\/ 1\mbox{]}}
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+sys/include/\hyperlink{mutex_8h}{mutex.\+h}\end{DoxyCompactItemize}

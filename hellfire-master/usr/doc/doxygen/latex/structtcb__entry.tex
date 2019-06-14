@@ -1,0 +1,185 @@
+\hypertarget{structtcb__entry}{}\section{tcb\+\_\+entry Struct Reference}
+\label{structtcb__entry}\index{tcb\+\_\+entry@{tcb\+\_\+entry}}
+
+
+Task control block (T\+CB) and processor control block (P\+CB) entry data structures.  
+
+
+
+
+{\ttfamily \#include $<$kernel.\+h$>$}
+
+\subsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+uint16\+\_\+t \hyperlink{structtcb__entry_ac06c8d6513b9d3031956b0efc2ab4871}{id}
+\item 
+int8\+\_\+t \hyperlink{structtcb__entry_ad7bfcb0f4b58b797af44f3a078abebff}{name} \mbox{[}20\mbox{]}
+\item 
+uint8\+\_\+t \hyperlink{structtcb__entry_a67f430ab50cb8ff9133e133fc240f3d7}{state}
+\item 
+uint8\+\_\+t \hyperlink{structtcb__entry_a5a925d67b6f5391815abcbd2c251c77d}{priority}
+\item 
+uint8\+\_\+t \hyperlink{structtcb__entry_a63888ca7a7a923f912bf3a404d1261ca}{priority\+\_\+rem}
+\item 
+uint8\+\_\+t \hyperlink{structtcb__entry_ab76fc52c033f2b9cd0adc9474fcde5ef}{critical}
+\item 
+uint32\+\_\+t \hyperlink{structtcb__entry_ab29fad6168f140493ddc8f860fadc3bc}{delay}
+\item 
+uint32\+\_\+t \hyperlink{structtcb__entry_a51802bc7ba3ee4cfcbcbfb404e606643}{rtjobs}
+\item 
+uint32\+\_\+t \hyperlink{structtcb__entry_a27631962295edabd283477b471f2d7ae}{bgjobs}
+\item 
+uint32\+\_\+t \hyperlink{structtcb__entry_a4594d17577feba0bd0825c8ef5e693db}{deadline\+\_\+misses}
+\item 
+uint16\+\_\+t \hyperlink{structtcb__entry_a85e14b4c040e0535b45b52a7ee7c9a94}{period}
+\item 
+uint16\+\_\+t \hyperlink{structtcb__entry_a2a3c8e5e81c910ccd845a8d1f58d550a}{capacity}
+\item 
+uint16\+\_\+t \hyperlink{structtcb__entry_a14ef4f38d7589e42ac7847b2bcc3443f}{deadline}
+\item 
+uint16\+\_\+t \hyperlink{structtcb__entry_a559dce8ac2982d3c8f46808ddc52bbb9}{capacity\+\_\+rem}
+\item 
+uint16\+\_\+t \hyperlink{structtcb__entry_af2ba0dde6c7ae71b6341714bf096cc80}{deadline\+\_\+rem}
+\item 
+context \hyperlink{structtcb__entry_a589e6c94b17a97df5d22edf504acfd42}{task\+\_\+context}
+\item 
+void($\ast$ \hyperlink{structtcb__entry_ae22d4a7aaefabed03dbfcb18633063e2}{ptask} )(void)
+\item 
+size\+\_\+t $\ast$ \hyperlink{structtcb__entry_a48bcced7fc892ae8db7138786e38a898}{pstack}
+\item 
+uint32\+\_\+t \hyperlink{structtcb__entry_a2174ff4c5cf178e9dc3d652c472b23dd}{stack\+\_\+size}
+\item 
+void $\ast$ \hyperlink{structtcb__entry_accd675f017bb0ec5ae63b4d729bd73aa}{other\+\_\+data}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Task control block (T\+CB) and processor control block (P\+CB) entry data structures. 
+
+\subsection{Field Documentation}
+\mbox{\Hypertarget{structtcb__entry_a27631962295edabd283477b471f2d7ae}\label{structtcb__entry_a27631962295edabd283477b471f2d7ae}} 
+\index{tcb\+\_\+entry@{tcb\+\_\+entry}!bgjobs@{bgjobs}}
+\index{bgjobs@{bgjobs}!tcb\+\_\+entry@{tcb\+\_\+entry}}
+\subsubsection{\texorpdfstring{bgjobs}{bgjobs}}
+{\footnotesize\ttfamily uint32\+\_\+t tcb\+\_\+entry\+::bgjobs}
+
+total BE task jobs executed \mbox{\Hypertarget{structtcb__entry_a2a3c8e5e81c910ccd845a8d1f58d550a}\label{structtcb__entry_a2a3c8e5e81c910ccd845a8d1f58d550a}} 
+\index{tcb\+\_\+entry@{tcb\+\_\+entry}!capacity@{capacity}}
+\index{capacity@{capacity}!tcb\+\_\+entry@{tcb\+\_\+entry}}
+\subsubsection{\texorpdfstring{capacity}{capacity}}
+{\footnotesize\ttfamily uint16\+\_\+t tcb\+\_\+entry\+::capacity}
+
+task capacity \mbox{\Hypertarget{structtcb__entry_a559dce8ac2982d3c8f46808ddc52bbb9}\label{structtcb__entry_a559dce8ac2982d3c8f46808ddc52bbb9}} 
+\index{tcb\+\_\+entry@{tcb\+\_\+entry}!capacity\+\_\+rem@{capacity\+\_\+rem}}
+\index{capacity\+\_\+rem@{capacity\+\_\+rem}!tcb\+\_\+entry@{tcb\+\_\+entry}}
+\subsubsection{\texorpdfstring{capacity\+\_\+rem}{capacity\_rem}}
+{\footnotesize\ttfamily uint16\+\_\+t tcb\+\_\+entry\+::capacity\+\_\+rem}
+
+remaining capacity on period \mbox{\Hypertarget{structtcb__entry_ab76fc52c033f2b9cd0adc9474fcde5ef}\label{structtcb__entry_ab76fc52c033f2b9cd0adc9474fcde5ef}} 
+\index{tcb\+\_\+entry@{tcb\+\_\+entry}!critical@{critical}}
+\index{critical@{critical}!tcb\+\_\+entry@{tcb\+\_\+entry}}
+\subsubsection{\texorpdfstring{critical}{critical}}
+{\footnotesize\ttfamily uint8\+\_\+t tcb\+\_\+entry\+::critical}
+
+critical event, interrupt request \mbox{\Hypertarget{structtcb__entry_a14ef4f38d7589e42ac7847b2bcc3443f}\label{structtcb__entry_a14ef4f38d7589e42ac7847b2bcc3443f}} 
+\index{tcb\+\_\+entry@{tcb\+\_\+entry}!deadline@{deadline}}
+\index{deadline@{deadline}!tcb\+\_\+entry@{tcb\+\_\+entry}}
+\subsubsection{\texorpdfstring{deadline}{deadline}}
+{\footnotesize\ttfamily uint16\+\_\+t tcb\+\_\+entry\+::deadline}
+
+task deadline \mbox{\Hypertarget{structtcb__entry_a4594d17577feba0bd0825c8ef5e693db}\label{structtcb__entry_a4594d17577feba0bd0825c8ef5e693db}} 
+\index{tcb\+\_\+entry@{tcb\+\_\+entry}!deadline\+\_\+misses@{deadline\+\_\+misses}}
+\index{deadline\+\_\+misses@{deadline\+\_\+misses}!tcb\+\_\+entry@{tcb\+\_\+entry}}
+\subsubsection{\texorpdfstring{deadline\+\_\+misses}{deadline\_misses}}
+{\footnotesize\ttfamily uint32\+\_\+t tcb\+\_\+entry\+::deadline\+\_\+misses}
+
+task realtime deadline misses \mbox{\Hypertarget{structtcb__entry_af2ba0dde6c7ae71b6341714bf096cc80}\label{structtcb__entry_af2ba0dde6c7ae71b6341714bf096cc80}} 
+\index{tcb\+\_\+entry@{tcb\+\_\+entry}!deadline\+\_\+rem@{deadline\+\_\+rem}}
+\index{deadline\+\_\+rem@{deadline\+\_\+rem}!tcb\+\_\+entry@{tcb\+\_\+entry}}
+\subsubsection{\texorpdfstring{deadline\+\_\+rem}{deadline\_rem}}
+{\footnotesize\ttfamily uint16\+\_\+t tcb\+\_\+entry\+::deadline\+\_\+rem}
+
+remaining time slices on period \mbox{\Hypertarget{structtcb__entry_ab29fad6168f140493ddc8f860fadc3bc}\label{structtcb__entry_ab29fad6168f140493ddc8f860fadc3bc}} 
+\index{tcb\+\_\+entry@{tcb\+\_\+entry}!delay@{delay}}
+\index{delay@{delay}!tcb\+\_\+entry@{tcb\+\_\+entry}}
+\subsubsection{\texorpdfstring{delay}{delay}}
+{\footnotesize\ttfamily uint32\+\_\+t tcb\+\_\+entry\+::delay}
+
+delay to enter in the run/\+RT queue \mbox{\Hypertarget{structtcb__entry_ac06c8d6513b9d3031956b0efc2ab4871}\label{structtcb__entry_ac06c8d6513b9d3031956b0efc2ab4871}} 
+\index{tcb\+\_\+entry@{tcb\+\_\+entry}!id@{id}}
+\index{id@{id}!tcb\+\_\+entry@{tcb\+\_\+entry}}
+\subsubsection{\texorpdfstring{id}{id}}
+{\footnotesize\ttfamily uint16\+\_\+t tcb\+\_\+entry\+::id}
+
+task id \mbox{\Hypertarget{structtcb__entry_ad7bfcb0f4b58b797af44f3a078abebff}\label{structtcb__entry_ad7bfcb0f4b58b797af44f3a078abebff}} 
+\index{tcb\+\_\+entry@{tcb\+\_\+entry}!name@{name}}
+\index{name@{name}!tcb\+\_\+entry@{tcb\+\_\+entry}}
+\subsubsection{\texorpdfstring{name}{name}}
+{\footnotesize\ttfamily int8\+\_\+t tcb\+\_\+entry\+::name\mbox{[}20\mbox{]}}
+
+task description (or name) \mbox{\Hypertarget{structtcb__entry_accd675f017bb0ec5ae63b4d729bd73aa}\label{structtcb__entry_accd675f017bb0ec5ae63b4d729bd73aa}} 
+\index{tcb\+\_\+entry@{tcb\+\_\+entry}!other\+\_\+data@{other\+\_\+data}}
+\index{other\+\_\+data@{other\+\_\+data}!tcb\+\_\+entry@{tcb\+\_\+entry}}
+\subsubsection{\texorpdfstring{other\+\_\+data}{other\_data}}
+{\footnotesize\ttfamily void$\ast$ tcb\+\_\+entry\+::other\+\_\+data}
+
+pointer to other data related to this task \mbox{\Hypertarget{structtcb__entry_a85e14b4c040e0535b45b52a7ee7c9a94}\label{structtcb__entry_a85e14b4c040e0535b45b52a7ee7c9a94}} 
+\index{tcb\+\_\+entry@{tcb\+\_\+entry}!period@{period}}
+\index{period@{period}!tcb\+\_\+entry@{tcb\+\_\+entry}}
+\subsubsection{\texorpdfstring{period}{period}}
+{\footnotesize\ttfamily uint16\+\_\+t tcb\+\_\+entry\+::period}
+
+task period \mbox{\Hypertarget{structtcb__entry_a5a925d67b6f5391815abcbd2c251c77d}\label{structtcb__entry_a5a925d67b6f5391815abcbd2c251c77d}} 
+\index{tcb\+\_\+entry@{tcb\+\_\+entry}!priority@{priority}}
+\index{priority@{priority}!tcb\+\_\+entry@{tcb\+\_\+entry}}
+\subsubsection{\texorpdfstring{priority}{priority}}
+{\footnotesize\ttfamily uint8\+\_\+t tcb\+\_\+entry\+::priority}
+
+\mbox{[}1 .. 29\mbox{]} -\/ critical, \mbox{[}30 .. 99\mbox{]} -\/ system, \mbox{[}100 .. 255\mbox{]} -\/ application \mbox{\Hypertarget{structtcb__entry_a63888ca7a7a923f912bf3a404d1261ca}\label{structtcb__entry_a63888ca7a7a923f912bf3a404d1261ca}} 
+\index{tcb\+\_\+entry@{tcb\+\_\+entry}!priority\+\_\+rem@{priority\+\_\+rem}}
+\index{priority\+\_\+rem@{priority\+\_\+rem}!tcb\+\_\+entry@{tcb\+\_\+entry}}
+\subsubsection{\texorpdfstring{priority\+\_\+rem}{priority\_rem}}
+{\footnotesize\ttfamily uint8\+\_\+t tcb\+\_\+entry\+::priority\+\_\+rem}
+
+remaining priority \mbox{\Hypertarget{structtcb__entry_a48bcced7fc892ae8db7138786e38a898}\label{structtcb__entry_a48bcced7fc892ae8db7138786e38a898}} 
+\index{tcb\+\_\+entry@{tcb\+\_\+entry}!pstack@{pstack}}
+\index{pstack@{pstack}!tcb\+\_\+entry@{tcb\+\_\+entry}}
+\subsubsection{\texorpdfstring{pstack}{pstack}}
+{\footnotesize\ttfamily size\+\_\+t$\ast$ tcb\+\_\+entry\+::pstack}
+
+task stack area (bottom) \mbox{\Hypertarget{structtcb__entry_ae22d4a7aaefabed03dbfcb18633063e2}\label{structtcb__entry_ae22d4a7aaefabed03dbfcb18633063e2}} 
+\index{tcb\+\_\+entry@{tcb\+\_\+entry}!ptask@{ptask}}
+\index{ptask@{ptask}!tcb\+\_\+entry@{tcb\+\_\+entry}}
+\subsubsection{\texorpdfstring{ptask}{ptask}}
+{\footnotesize\ttfamily void($\ast$ tcb\+\_\+entry\+::ptask) (void)}
+
+task entry point, pointer to function \mbox{\Hypertarget{structtcb__entry_a51802bc7ba3ee4cfcbcbfb404e606643}\label{structtcb__entry_a51802bc7ba3ee4cfcbcbfb404e606643}} 
+\index{tcb\+\_\+entry@{tcb\+\_\+entry}!rtjobs@{rtjobs}}
+\index{rtjobs@{rtjobs}!tcb\+\_\+entry@{tcb\+\_\+entry}}
+\subsubsection{\texorpdfstring{rtjobs}{rtjobs}}
+{\footnotesize\ttfamily uint32\+\_\+t tcb\+\_\+entry\+::rtjobs}
+
+total RT task jobs executed \mbox{\Hypertarget{structtcb__entry_a2174ff4c5cf178e9dc3d652c472b23dd}\label{structtcb__entry_a2174ff4c5cf178e9dc3d652c472b23dd}} 
+\index{tcb\+\_\+entry@{tcb\+\_\+entry}!stack\+\_\+size@{stack\+\_\+size}}
+\index{stack\+\_\+size@{stack\+\_\+size}!tcb\+\_\+entry@{tcb\+\_\+entry}}
+\subsubsection{\texorpdfstring{stack\+\_\+size}{stack\_size}}
+{\footnotesize\ttfamily uint32\+\_\+t tcb\+\_\+entry\+::stack\+\_\+size}
+
+task stack size \mbox{\Hypertarget{structtcb__entry_a67f430ab50cb8ff9133e133fc240f3d7}\label{structtcb__entry_a67f430ab50cb8ff9133e133fc240f3d7}} 
+\index{tcb\+\_\+entry@{tcb\+\_\+entry}!state@{state}}
+\index{state@{state}!tcb\+\_\+entry@{tcb\+\_\+entry}}
+\subsubsection{\texorpdfstring{state}{state}}
+{\footnotesize\ttfamily uint8\+\_\+t tcb\+\_\+entry\+::state}
+
+0 -\/ idle, 1 -\/ ready, 2 -\/ running, 3 -\/ blocked, 4 -\/ delayed, 5 -\/ waiting \mbox{\Hypertarget{structtcb__entry_a589e6c94b17a97df5d22edf504acfd42}\label{structtcb__entry_a589e6c94b17a97df5d22edf504acfd42}} 
+\index{tcb\+\_\+entry@{tcb\+\_\+entry}!task\+\_\+context@{task\+\_\+context}}
+\index{task\+\_\+context@{task\+\_\+context}!tcb\+\_\+entry@{tcb\+\_\+entry}}
+\subsubsection{\texorpdfstring{task\+\_\+context}{task\_context}}
+{\footnotesize\ttfamily context tcb\+\_\+entry\+::task\+\_\+context}
+
+task context 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+sys/include/\hyperlink{kernel_8h}{kernel.\+h}\end{DoxyCompactItemize}

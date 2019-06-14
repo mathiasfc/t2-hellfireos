@@ -1,0 +1,24 @@
+\hypertarget{noc__rpc_8h}{}\section{drivers/noc/include/noc\+\_\+rpc.h File Reference}
+\label{noc__rpc_8h}\index{drivers/noc/include/noc\+\_\+rpc.\+h@{drivers/noc/include/noc\+\_\+rpc.\+h}}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int32\+\_\+t \hyperlink{noc__rpc_8h_a3c908584766e62d5385a09c224eaf649}{hf\+\_\+register} (uint32\+\_\+t prognum, uint32\+\_\+t procnum, int8\+\_\+t $\ast$($\ast$pname)(int8\+\_\+t $\ast$), int8\+\_\+t $\ast$in, uint16\+\_\+t in\+\_\+size, int8\+\_\+t $\ast$out, uint16\+\_\+t out\+\_\+size)
+\item 
+int32\+\_\+t \hyperlink{noc__rpc_8h_ad9b5d1c07753dae5891c79c8b659bec5}{hf\+\_\+call} (uint16\+\_\+t cpu, uint32\+\_\+t prognum, uint32\+\_\+t procnum, int8\+\_\+t $\ast$in, uint16\+\_\+t in\+\_\+size int8\+\_\+t $\ast$out, uint16\+\_\+t out\+\_\+size)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{noc__rpc_8h_ad9b5d1c07753dae5891c79c8b659bec5}\label{noc__rpc_8h_ad9b5d1c07753dae5891c79c8b659bec5}} 
+\index{noc\+\_\+rpc.\+h@{noc\+\_\+rpc.\+h}!hf\+\_\+call@{hf\+\_\+call}}
+\index{hf\+\_\+call@{hf\+\_\+call}!noc\+\_\+rpc.\+h@{noc\+\_\+rpc.\+h}}
+\subsubsection{\texorpdfstring{hf\+\_\+call()}{hf\_call()}}
+{\footnotesize\ttfamily int32\+\_\+t hf\+\_\+call (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{cpu,  }\item[{uint32\+\_\+t}]{prognum,  }\item[{uint32\+\_\+t}]{procnum,  }\item[{int8\+\_\+t $\ast$}]{in,  }\item[{uint16\+\_\+t in\+\_\+size int8\+\_\+t $\ast$}]{out,  }\item[{uint16\+\_\+t}]{out\+\_\+size }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{noc__rpc_8h_a3c908584766e62d5385a09c224eaf649}\label{noc__rpc_8h_a3c908584766e62d5385a09c224eaf649}} 
+\index{noc\+\_\+rpc.\+h@{noc\+\_\+rpc.\+h}!hf\+\_\+register@{hf\+\_\+register}}
+\index{hf\+\_\+register@{hf\+\_\+register}!noc\+\_\+rpc.\+h@{noc\+\_\+rpc.\+h}}
+\subsubsection{\texorpdfstring{hf\+\_\+register()}{hf\_register()}}
+{\footnotesize\ttfamily int32\+\_\+t hf\+\_\+register (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{prognum,  }\item[{uint32\+\_\+t}]{procnum,  }\item[{int8\+\_\+t $\ast$($\ast$)(int8\+\_\+t $\ast$)}]{pname,  }\item[{int8\+\_\+t $\ast$}]{in,  }\item[{uint16\+\_\+t}]{in\+\_\+size,  }\item[{int8\+\_\+t $\ast$}]{out,  }\item[{uint16\+\_\+t}]{out\+\_\+size }\end{DoxyParamCaption})}
+

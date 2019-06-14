@@ -1,0 +1,50 @@
+\hypertarget{structcondvar}{}\section{condvar Struct Reference}
+\label{structcondvar}\index{condvar@{condvar}}
+
+
+Condition variable data structure.  
+
+
+
+
+{\ttfamily \#include $<$condvar.\+h$>$}
+
+
+
+Collaboration diagram for condvar\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=196pt]{structcondvar__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structqueue}{queue} $\ast$ \hyperlink{structcondvar_abf91dd97763d95af19ee92a17f55afb8}{cond\+\_\+queue}
+\item 
+\hyperlink{mutex_8h_af6ff4e9d708d58c0662f63a81713a926}{mutex\+\_\+t} \hyperlink{structcondvar_a573f1b5d528d692d581b734913807b66}{mutex}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Condition variable data structure. 
+
+\subsection{Field Documentation}
+\mbox{\Hypertarget{structcondvar_abf91dd97763d95af19ee92a17f55afb8}\label{structcondvar_abf91dd97763d95af19ee92a17f55afb8}} 
+\index{condvar@{condvar}!cond\+\_\+queue@{cond\+\_\+queue}}
+\index{cond\+\_\+queue@{cond\+\_\+queue}!condvar@{condvar}}
+\subsubsection{\texorpdfstring{cond\+\_\+queue}{cond\_queue}}
+{\footnotesize\ttfamily struct \hyperlink{structqueue}{queue}$\ast$ condvar\+::cond\+\_\+queue}
+
+queue for tasks waiting on the condition variable \mbox{\Hypertarget{structcondvar_a573f1b5d528d692d581b734913807b66}\label{structcondvar_a573f1b5d528d692d581b734913807b66}} 
+\index{condvar@{condvar}!mutex@{mutex}}
+\index{mutex@{mutex}!condvar@{condvar}}
+\subsubsection{\texorpdfstring{mutex}{mutex}}
+{\footnotesize\ttfamily \hyperlink{mutex_8h_af6ff4e9d708d58c0662f63a81713a926}{mutex\+\_\+t} condvar\+::mutex}
+
+mutex used for the critical section associated with the condition variable 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+sys/include/\hyperlink{condvar_8h}{condvar.\+h}\end{DoxyCompactItemize}

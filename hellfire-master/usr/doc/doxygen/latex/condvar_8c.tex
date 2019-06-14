@@ -1,0 +1,113 @@
+\hypertarget{condvar_8c}{}\section{sys/sync/condvar.c File Reference}
+\label{condvar_8c}\index{sys/sync/condvar.\+c@{sys/sync/condvar.\+c}}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int32\+\_\+t \hyperlink{condvar_8c_a6f0858342a87feaa65201dcd20b2686d}{hf\+\_\+condinit} (\hyperlink{condvar_8h_aad9b18f87ec1ccc024d7d37d5834bdcf}{cond\+\_\+t} $\ast$c)
+\begin{DoxyCompactList}\small\item\em Initializes a condition variable. \end{DoxyCompactList}\item 
+int32\+\_\+t \hyperlink{condvar_8c_a0085b7d8162e3195b6c5a021f811ce17}{hf\+\_\+conddestroy} (\hyperlink{condvar_8h_aad9b18f87ec1ccc024d7d37d5834bdcf}{cond\+\_\+t} $\ast$c)
+\begin{DoxyCompactList}\small\item\em Destroys a condition variable. \end{DoxyCompactList}\item 
+void \hyperlink{condvar_8c_a2500f2dc6bebbd3b2c106c2062ad9cff}{hf\+\_\+condwait} (\hyperlink{condvar_8h_aad9b18f87ec1ccc024d7d37d5834bdcf}{cond\+\_\+t} $\ast$c, \hyperlink{mutex_8h_af6ff4e9d708d58c0662f63a81713a926}{mutex\+\_\+t} $\ast$m)
+\begin{DoxyCompactList}\small\item\em Wait on a condition variable. \end{DoxyCompactList}\item 
+void \hyperlink{condvar_8c_a1b4c91e74810a728df751b5b9164b628}{hf\+\_\+condsignal} (\hyperlink{condvar_8h_aad9b18f87ec1ccc024d7d37d5834bdcf}{cond\+\_\+t} $\ast$c)
+\begin{DoxyCompactList}\small\item\em Signal a condition variable. \end{DoxyCompactList}\item 
+void \hyperlink{condvar_8c_ad9451e9cd837efdee55102545c130f36}{hf\+\_\+condbroadcast} (\hyperlink{condvar_8h_aad9b18f87ec1ccc024d7d37d5834bdcf}{cond\+\_\+t} $\ast$c)
+\begin{DoxyCompactList}\small\item\em Signal (broadcast) a condition variable. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyAuthor}{Author}
+Sergio Johann Filho 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+May 2016
+\end{DoxyDate}
+\hypertarget{semaphore_8c_LICENSE}{}\subsection{L\+I\+C\+E\+N\+SE}\label{semaphore_8c_LICENSE}
+This source code is licensed under the G\+NU General Public License, Version 2. See the file \textquotesingle{}doc/license/gpl-\/2.\+0.\+txt\textquotesingle{} for more details.\hypertarget{semaphore_8c_DESCRIPTION}{}\subsection{D\+E\+S\+C\+R\+I\+P\+T\+I\+ON}\label{semaphore_8c_DESCRIPTION}
+Condition variable synchronization primitives. 
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{condvar_8c_ad9451e9cd837efdee55102545c130f36}\label{condvar_8c_ad9451e9cd837efdee55102545c130f36}} 
+\index{condvar.\+c@{condvar.\+c}!hf\+\_\+condbroadcast@{hf\+\_\+condbroadcast}}
+\index{hf\+\_\+condbroadcast@{hf\+\_\+condbroadcast}!condvar.\+c@{condvar.\+c}}
+\subsubsection{\texorpdfstring{hf\+\_\+condbroadcast()}{hf\_condbroadcast()}}
+{\footnotesize\ttfamily void hf\+\_\+condbroadcast (\begin{DoxyParamCaption}\item[{\hyperlink{condvar_8h_aad9b18f87ec1ccc024d7d37d5834bdcf}{cond\+\_\+t} $\ast$}]{c }\end{DoxyParamCaption})}
+
+
+
+Signal (broadcast) a condition variable. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em c} & is a pointer to a condition variable.\\
+\hline
+\end{DoxyParams}
+Implements the condition signal broadcast operation for all waiting tasks. The call unblocks and removes all tasks from the waiting queue. If no tasks are waiting for the condition, the signal is lost. \mbox{\Hypertarget{condvar_8c_a0085b7d8162e3195b6c5a021f811ce17}\label{condvar_8c_a0085b7d8162e3195b6c5a021f811ce17}} 
+\index{condvar.\+c@{condvar.\+c}!hf\+\_\+conddestroy@{hf\+\_\+conddestroy}}
+\index{hf\+\_\+conddestroy@{hf\+\_\+conddestroy}!condvar.\+c@{condvar.\+c}}
+\subsubsection{\texorpdfstring{hf\+\_\+conddestroy()}{hf\_conddestroy()}}
+{\footnotesize\ttfamily int32\+\_\+t hf\+\_\+conddestroy (\begin{DoxyParamCaption}\item[{\hyperlink{condvar_8h_aad9b18f87ec1ccc024d7d37d5834bdcf}{cond\+\_\+t} $\ast$}]{c }\end{DoxyParamCaption})}
+
+
+
+Destroys a condition variable. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em c} & is a pointer to a condition variable.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+E\+R\+R\+\_\+\+OK on success and E\+R\+R\+\_\+\+E\+R\+R\+OR if the condition variable could not be removed from memory. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{condvar_8c_a6f0858342a87feaa65201dcd20b2686d}\label{condvar_8c_a6f0858342a87feaa65201dcd20b2686d}} 
+\index{condvar.\+c@{condvar.\+c}!hf\+\_\+condinit@{hf\+\_\+condinit}}
+\index{hf\+\_\+condinit@{hf\+\_\+condinit}!condvar.\+c@{condvar.\+c}}
+\subsubsection{\texorpdfstring{hf\+\_\+condinit()}{hf\_condinit()}}
+{\footnotesize\ttfamily int32\+\_\+t hf\+\_\+condinit (\begin{DoxyParamCaption}\item[{\hyperlink{condvar_8h_aad9b18f87ec1ccc024d7d37d5834bdcf}{cond\+\_\+t} $\ast$}]{c }\end{DoxyParamCaption})}
+
+
+
+Initializes a condition variable. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em c} & is a pointer to a condition variable.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+E\+R\+R\+\_\+\+OK on success and E\+R\+R\+\_\+\+E\+R\+R\+OR if the condition variable could not be allocated in memory. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{condvar_8c_a1b4c91e74810a728df751b5b9164b628}\label{condvar_8c_a1b4c91e74810a728df751b5b9164b628}} 
+\index{condvar.\+c@{condvar.\+c}!hf\+\_\+condsignal@{hf\+\_\+condsignal}}
+\index{hf\+\_\+condsignal@{hf\+\_\+condsignal}!condvar.\+c@{condvar.\+c}}
+\subsubsection{\texorpdfstring{hf\+\_\+condsignal()}{hf\_condsignal()}}
+{\footnotesize\ttfamily void hf\+\_\+condsignal (\begin{DoxyParamCaption}\item[{\hyperlink{condvar_8h_aad9b18f87ec1ccc024d7d37d5834bdcf}{cond\+\_\+t} $\ast$}]{c }\end{DoxyParamCaption})}
+
+
+
+Signal a condition variable. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em c} & is a pointer to a condition variable.\\
+\hline
+\end{DoxyParams}
+Implements the condition signal operation for one waiting task. The call removes a task from the waiting queue and unblocks it. If no tasks are waiting for the condition, the signal is lost. \mbox{\Hypertarget{condvar_8c_a2500f2dc6bebbd3b2c106c2062ad9cff}\label{condvar_8c_a2500f2dc6bebbd3b2c106c2062ad9cff}} 
+\index{condvar.\+c@{condvar.\+c}!hf\+\_\+condwait@{hf\+\_\+condwait}}
+\index{hf\+\_\+condwait@{hf\+\_\+condwait}!condvar.\+c@{condvar.\+c}}
+\subsubsection{\texorpdfstring{hf\+\_\+condwait()}{hf\_condwait()}}
+{\footnotesize\ttfamily void hf\+\_\+condwait (\begin{DoxyParamCaption}\item[{\hyperlink{condvar_8h_aad9b18f87ec1ccc024d7d37d5834bdcf}{cond\+\_\+t} $\ast$}]{c,  }\item[{\hyperlink{mutex_8h_af6ff4e9d708d58c0662f63a81713a926}{mutex\+\_\+t} $\ast$}]{m }\end{DoxyParamCaption})}
+
+
+
+Wait on a condition variable. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em c} & is a pointer to a condition variable. \\
+\hline
+{\em m} & is a pointer to a mutex.\\
+\hline
+\end{DoxyParams}
+Implements the atomic condition wait operation. The call should always be invoked with the mutex locked. The current task is put in a queue on the condition variable, its state is set to blocked and unlocks the mutex atomically, then yields the processor. When woke up (by a signalling task), the task locks the mutex and returns. 

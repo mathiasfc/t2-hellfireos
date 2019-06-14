@@ -1,0 +1,60 @@
+\hypertarget{ni__hermes_8c}{}\section{drivers/noc/ni\+\_\+hermes.c File Reference}
+\label{ni__hermes_8c}\index{drivers/noc/ni\+\_\+hermes.\+c@{drivers/noc/ni\+\_\+hermes.\+c}}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int32\+\_\+t \hyperlink{ni__hermes_8c_ac935a14a6eed5d7cacb21ecc72ec2fa5}{ni\+\_\+ready} (void)
+\item 
+int32\+\_\+t \hyperlink{ni__hermes_8c_a440c71c3a4d4c4f5704de080f85f1428}{ni\+\_\+flush} (uint16\+\_\+t pkt\+\_\+size)
+\item 
+int32\+\_\+t \hyperlink{ni__hermes_8c_a7185a5c02c3e5dd69df562a2cc3033b1}{ni\+\_\+read\+\_\+packet} (uint16\+\_\+t $\ast$buf, uint16\+\_\+t pkt\+\_\+size)
+\item 
+int32\+\_\+t \hyperlink{ni__hermes_8c_a29d4f0701c32bc2cb4812bfde7e26f01}{ni\+\_\+write\+\_\+packet} (uint16\+\_\+t $\ast$buf, uint16\+\_\+t pkt\+\_\+size)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyAuthor}{Author}
+Sergio Johann Filho 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+July 2018
+\end{DoxyDate}
+\hypertarget{semaphore_8c_LICENSE}{}\subsection{L\+I\+C\+E\+N\+SE}\label{semaphore_8c_LICENSE}
+This source code is licensed under the G\+NU General Public License, Version 2. See the file \textquotesingle{}doc/license/gpl-\/2.\+0.\+txt\textquotesingle{} for more details.\hypertarget{semaphore_8c_DESCRIPTION}{}\subsection{D\+E\+S\+C\+R\+I\+P\+T\+I\+ON}\label{semaphore_8c_DESCRIPTION}
+Network interface driver for a simple interface (queue based) attached to an Hermes NoC. This driver works with 16-\/bit flits. Basic media access functions (\+\_\+ni\+\_\+status(), \+\_\+ni\+\_\+read() and \+\_\+ni\+\_\+write()) defined in the processor architecture memory map are used in this driver.
+
+Packet format is as follows\+:
+
+\begin{DoxyVerb} 2 bytes   2 bytes         ....
+--------------------------------------
+|tgt_cpu  |payload  |  ... data ...  |
+--------------------------------------
+\end{DoxyVerb}
+ 
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{ni__hermes_8c_a440c71c3a4d4c4f5704de080f85f1428}\label{ni__hermes_8c_a440c71c3a4d4c4f5704de080f85f1428}} 
+\index{ni\+\_\+hermes.\+c@{ni\+\_\+hermes.\+c}!ni\+\_\+flush@{ni\+\_\+flush}}
+\index{ni\+\_\+flush@{ni\+\_\+flush}!ni\+\_\+hermes.\+c@{ni\+\_\+hermes.\+c}}
+\subsubsection{\texorpdfstring{ni\+\_\+flush()}{ni\_flush()}}
+{\footnotesize\ttfamily int32\+\_\+t ni\+\_\+flush (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{pkt\+\_\+size }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{ni__hermes_8c_a7185a5c02c3e5dd69df562a2cc3033b1}\label{ni__hermes_8c_a7185a5c02c3e5dd69df562a2cc3033b1}} 
+\index{ni\+\_\+hermes.\+c@{ni\+\_\+hermes.\+c}!ni\+\_\+read\+\_\+packet@{ni\+\_\+read\+\_\+packet}}
+\index{ni\+\_\+read\+\_\+packet@{ni\+\_\+read\+\_\+packet}!ni\+\_\+hermes.\+c@{ni\+\_\+hermes.\+c}}
+\subsubsection{\texorpdfstring{ni\+\_\+read\+\_\+packet()}{ni\_read\_packet()}}
+{\footnotesize\ttfamily int32\+\_\+t ni\+\_\+read\+\_\+packet (\begin{DoxyParamCaption}\item[{uint16\+\_\+t $\ast$}]{buf,  }\item[{uint16\+\_\+t}]{pkt\+\_\+size }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{ni__hermes_8c_ac935a14a6eed5d7cacb21ecc72ec2fa5}\label{ni__hermes_8c_ac935a14a6eed5d7cacb21ecc72ec2fa5}} 
+\index{ni\+\_\+hermes.\+c@{ni\+\_\+hermes.\+c}!ni\+\_\+ready@{ni\+\_\+ready}}
+\index{ni\+\_\+ready@{ni\+\_\+ready}!ni\+\_\+hermes.\+c@{ni\+\_\+hermes.\+c}}
+\subsubsection{\texorpdfstring{ni\+\_\+ready()}{ni\_ready()}}
+{\footnotesize\ttfamily int32\+\_\+t ni\+\_\+ready (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{ni__hermes_8c_a29d4f0701c32bc2cb4812bfde7e26f01}\label{ni__hermes_8c_a29d4f0701c32bc2cb4812bfde7e26f01}} 
+\index{ni\+\_\+hermes.\+c@{ni\+\_\+hermes.\+c}!ni\+\_\+write\+\_\+packet@{ni\+\_\+write\+\_\+packet}}
+\index{ni\+\_\+write\+\_\+packet@{ni\+\_\+write\+\_\+packet}!ni\+\_\+hermes.\+c@{ni\+\_\+hermes.\+c}}
+\subsubsection{\texorpdfstring{ni\+\_\+write\+\_\+packet()}{ni\_write\_packet()}}
+{\footnotesize\ttfamily int32\+\_\+t ni\+\_\+write\+\_\+packet (\begin{DoxyParamCaption}\item[{uint16\+\_\+t $\ast$}]{buf,  }\item[{uint16\+\_\+t}]{pkt\+\_\+size }\end{DoxyParamCaption})}
+

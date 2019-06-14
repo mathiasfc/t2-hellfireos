@@ -1,0 +1,126 @@
+\hypertarget{kernel_8h}{}\section{sys/include/kernel.h File Reference}
+\label{kernel_8h}\index{sys/include/kernel.\+h@{sys/include/kernel.\+h}}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structtcb__entry}{tcb\+\_\+entry}
+\begin{DoxyCompactList}\small\item\em Task control block (T\+CB) and processor control block (P\+CB) entry data structures. \end{DoxyCompactList}\item 
+struct \hyperlink{structpcb__entry}{pcb\+\_\+entry}
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structtcb__entry}{tcb\+\_\+entry} \hyperlink{kernel_8h_a3fc9c4d501dff3892623466e7d1c479d}{krnl\+\_\+tcb} \mbox{[}M\+A\+X\+\_\+\+T\+A\+S\+KS\mbox{]}
+\begin{DoxyCompactList}\small\item\em The task control block and processor control block. \end{DoxyCompactList}\item 
+struct \hyperlink{structpcb__entry}{pcb\+\_\+entry} \hyperlink{kernel_8h_af3055369b0f2af2ae86e2d95ec1b87b7}{krnl\+\_\+pcb}
+\item 
+struct \hyperlink{structtcb__entry}{tcb\+\_\+entry} $\ast$ \hyperlink{kernel_8h_a0b347b2a9f226d4bc709a296b5cbc189}{krnl\+\_\+task}
+\item 
+uint16\+\_\+t \hyperlink{kernel_8h_a3289a2f20f14e35ff9e127fa281318b6}{krnl\+\_\+tasks}
+\item 
+uint16\+\_\+t \hyperlink{kernel_8h_a784d1710b495108c11d5d11c8fb43516}{krnl\+\_\+current\+\_\+task}
+\item 
+uint16\+\_\+t \hyperlink{kernel_8h_aa32f6edbc8444a2acb45729b024d13d5}{krnl\+\_\+schedule}
+\item 
+struct \hyperlink{structqueue}{queue} $\ast$ \hyperlink{kernel_8h_a5141ea9b1498a972a227094289188047}{krnl\+\_\+run\+\_\+queue}
+\item 
+struct \hyperlink{structqueue}{queue} $\ast$ \hyperlink{kernel_8h_ae4bf97399eec663eacfa816d0b81082e}{krnl\+\_\+delay\+\_\+queue}
+\item 
+struct \hyperlink{structqueue}{queue} $\ast$ \hyperlink{kernel_8h_ada5d16f9dd5684be324c7cf3a06d05bf}{krnl\+\_\+rt\+\_\+queue}
+\item 
+struct \hyperlink{structqueue}{queue} $\ast$ \hyperlink{kernel_8h_a5903b31cf96f8d2697316b67a0b1f10b}{krnl\+\_\+event\+\_\+queue}
+\item 
+uint8\+\_\+t \hyperlink{kernel_8h_a2db720ce5f1ce81dba0cf5c773b2610a}{krnl\+\_\+heap} \mbox{[}H\+E\+A\+P\+\_\+\+S\+I\+ZE\mbox{]}
+\item 
+uint32\+\_\+t \hyperlink{kernel_8h_a6bada0206d47773f897a3c58528c794a}{krnl\+\_\+free}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyAuthor}{Author}
+Sergio Johann Filho 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+February 2016
+\end{DoxyDate}
+\hypertarget{semaphore_8c_LICENSE}{}\subsection{L\+I\+C\+E\+N\+SE}\label{semaphore_8c_LICENSE}
+This source code is licensed under the G\+NU General Public License, Version 2. See the file \textquotesingle{}doc/license/gpl-\/2.\+0.\+txt\textquotesingle{} for more details.\hypertarget{semaphore_8c_DESCRIPTION}{}\subsection{D\+E\+S\+C\+R\+I\+P\+T\+I\+ON}\label{semaphore_8c_DESCRIPTION}
+Kernel data structures. 
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{kernel_8h_a784d1710b495108c11d5d11c8fb43516}\label{kernel_8h_a784d1710b495108c11d5d11c8fb43516}} 
+\index{kernel.\+h@{kernel.\+h}!krnl\+\_\+current\+\_\+task@{krnl\+\_\+current\+\_\+task}}
+\index{krnl\+\_\+current\+\_\+task@{krnl\+\_\+current\+\_\+task}!kernel.\+h@{kernel.\+h}}
+\subsubsection{\texorpdfstring{krnl\+\_\+current\+\_\+task}{krnl\_current\_task}}
+{\footnotesize\ttfamily uint16\+\_\+t krnl\+\_\+current\+\_\+task}
+
+the current running task id \mbox{\Hypertarget{kernel_8h_ae4bf97399eec663eacfa816d0b81082e}\label{kernel_8h_ae4bf97399eec663eacfa816d0b81082e}} 
+\index{kernel.\+h@{kernel.\+h}!krnl\+\_\+delay\+\_\+queue@{krnl\+\_\+delay\+\_\+queue}}
+\index{krnl\+\_\+delay\+\_\+queue@{krnl\+\_\+delay\+\_\+queue}!kernel.\+h@{kernel.\+h}}
+\subsubsection{\texorpdfstring{krnl\+\_\+delay\+\_\+queue}{krnl\_delay\_queue}}
+{\footnotesize\ttfamily struct \hyperlink{structqueue}{queue}$\ast$ krnl\+\_\+delay\+\_\+queue}
+
+pointer to a queue of delayed tasks \mbox{\Hypertarget{kernel_8h_a5903b31cf96f8d2697316b67a0b1f10b}\label{kernel_8h_a5903b31cf96f8d2697316b67a0b1f10b}} 
+\index{kernel.\+h@{kernel.\+h}!krnl\+\_\+event\+\_\+queue@{krnl\+\_\+event\+\_\+queue}}
+\index{krnl\+\_\+event\+\_\+queue@{krnl\+\_\+event\+\_\+queue}!kernel.\+h@{kernel.\+h}}
+\subsubsection{\texorpdfstring{krnl\+\_\+event\+\_\+queue}{krnl\_event\_queue}}
+{\footnotesize\ttfamily struct \hyperlink{structqueue}{queue}$\ast$ krnl\+\_\+event\+\_\+queue}
+
+pointer to a queue of tasks waiting for an event \mbox{\Hypertarget{kernel_8h_a6bada0206d47773f897a3c58528c794a}\label{kernel_8h_a6bada0206d47773f897a3c58528c794a}} 
+\index{kernel.\+h@{kernel.\+h}!krnl\+\_\+free@{krnl\+\_\+free}}
+\index{krnl\+\_\+free@{krnl\+\_\+free}!kernel.\+h@{kernel.\+h}}
+\subsubsection{\texorpdfstring{krnl\+\_\+free}{krnl\_free}}
+{\footnotesize\ttfamily uint32\+\_\+t krnl\+\_\+free}
+
+amount of free heap memory, in bytes \mbox{\Hypertarget{kernel_8h_a2db720ce5f1ce81dba0cf5c773b2610a}\label{kernel_8h_a2db720ce5f1ce81dba0cf5c773b2610a}} 
+\index{kernel.\+h@{kernel.\+h}!krnl\+\_\+heap@{krnl\+\_\+heap}}
+\index{krnl\+\_\+heap@{krnl\+\_\+heap}!kernel.\+h@{kernel.\+h}}
+\subsubsection{\texorpdfstring{krnl\+\_\+heap}{krnl\_heap}}
+{\footnotesize\ttfamily uint8\+\_\+t krnl\+\_\+heap\mbox{[}H\+E\+A\+P\+\_\+\+S\+I\+ZE\mbox{]}}
+
+contiguous heap memory area to be used as a memory pool. the memory allocator (malloc() and free()) controls this data structure \mbox{\Hypertarget{kernel_8h_af3055369b0f2af2ae86e2d95ec1b87b7}\label{kernel_8h_af3055369b0f2af2ae86e2d95ec1b87b7}} 
+\index{kernel.\+h@{kernel.\+h}!krnl\+\_\+pcb@{krnl\+\_\+pcb}}
+\index{krnl\+\_\+pcb@{krnl\+\_\+pcb}!kernel.\+h@{kernel.\+h}}
+\subsubsection{\texorpdfstring{krnl\+\_\+pcb}{krnl\_pcb}}
+{\footnotesize\ttfamily struct \hyperlink{structpcb__entry}{pcb\+\_\+entry} krnl\+\_\+pcb}
+
+\mbox{\Hypertarget{kernel_8h_ada5d16f9dd5684be324c7cf3a06d05bf}\label{kernel_8h_ada5d16f9dd5684be324c7cf3a06d05bf}} 
+\index{kernel.\+h@{kernel.\+h}!krnl\+\_\+rt\+\_\+queue@{krnl\+\_\+rt\+\_\+queue}}
+\index{krnl\+\_\+rt\+\_\+queue@{krnl\+\_\+rt\+\_\+queue}!kernel.\+h@{kernel.\+h}}
+\subsubsection{\texorpdfstring{krnl\+\_\+rt\+\_\+queue}{krnl\_rt\_queue}}
+{\footnotesize\ttfamily struct \hyperlink{structqueue}{queue}$\ast$ krnl\+\_\+rt\+\_\+queue}
+
+pointer to a queue of real time tasks \mbox{\Hypertarget{kernel_8h_a5141ea9b1498a972a227094289188047}\label{kernel_8h_a5141ea9b1498a972a227094289188047}} 
+\index{kernel.\+h@{kernel.\+h}!krnl\+\_\+run\+\_\+queue@{krnl\+\_\+run\+\_\+queue}}
+\index{krnl\+\_\+run\+\_\+queue@{krnl\+\_\+run\+\_\+queue}!kernel.\+h@{kernel.\+h}}
+\subsubsection{\texorpdfstring{krnl\+\_\+run\+\_\+queue}{krnl\_run\_queue}}
+{\footnotesize\ttfamily struct \hyperlink{structqueue}{queue}$\ast$ krnl\+\_\+run\+\_\+queue}
+
+pointer to a queue of best effort tasks \mbox{\Hypertarget{kernel_8h_aa32f6edbc8444a2acb45729b024d13d5}\label{kernel_8h_aa32f6edbc8444a2acb45729b024d13d5}} 
+\index{kernel.\+h@{kernel.\+h}!krnl\+\_\+schedule@{krnl\+\_\+schedule}}
+\index{krnl\+\_\+schedule@{krnl\+\_\+schedule}!kernel.\+h@{kernel.\+h}}
+\subsubsection{\texorpdfstring{krnl\+\_\+schedule}{krnl\_schedule}}
+{\footnotesize\ttfamily uint16\+\_\+t krnl\+\_\+schedule}
+
+scheduler enable / disable flag \mbox{\Hypertarget{kernel_8h_a0b347b2a9f226d4bc709a296b5cbc189}\label{kernel_8h_a0b347b2a9f226d4bc709a296b5cbc189}} 
+\index{kernel.\+h@{kernel.\+h}!krnl\+\_\+task@{krnl\+\_\+task}}
+\index{krnl\+\_\+task@{krnl\+\_\+task}!kernel.\+h@{kernel.\+h}}
+\subsubsection{\texorpdfstring{krnl\+\_\+task}{krnl\_task}}
+{\footnotesize\ttfamily struct \hyperlink{structtcb__entry}{tcb\+\_\+entry}$\ast$ krnl\+\_\+task}
+
+pointer to a task control block entry \mbox{\Hypertarget{kernel_8h_a3289a2f20f14e35ff9e127fa281318b6}\label{kernel_8h_a3289a2f20f14e35ff9e127fa281318b6}} 
+\index{kernel.\+h@{kernel.\+h}!krnl\+\_\+tasks@{krnl\+\_\+tasks}}
+\index{krnl\+\_\+tasks@{krnl\+\_\+tasks}!kernel.\+h@{kernel.\+h}}
+\subsubsection{\texorpdfstring{krnl\+\_\+tasks}{krnl\_tasks}}
+{\footnotesize\ttfamily uint16\+\_\+t krnl\+\_\+tasks}
+
+number of tasks in the system \mbox{\Hypertarget{kernel_8h_a3fc9c4d501dff3892623466e7d1c479d}\label{kernel_8h_a3fc9c4d501dff3892623466e7d1c479d}} 
+\index{kernel.\+h@{kernel.\+h}!krnl\+\_\+tcb@{krnl\+\_\+tcb}}
+\index{krnl\+\_\+tcb@{krnl\+\_\+tcb}!kernel.\+h@{kernel.\+h}}
+\subsubsection{\texorpdfstring{krnl\+\_\+tcb}{krnl\_tcb}}
+{\footnotesize\ttfamily struct \hyperlink{structtcb__entry}{tcb\+\_\+entry} krnl\+\_\+tcb\mbox{[}M\+A\+X\+\_\+\+T\+A\+S\+KS\mbox{]}}
+
+
+
+The task control block and processor control block. 
+
