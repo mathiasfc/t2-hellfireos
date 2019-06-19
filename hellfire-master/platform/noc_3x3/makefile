@@ -43,7 +43,7 @@ images:
 
 clean:
 	rm -rf *.o *~ *.elf *.bin *.cnt *.lst *.sec *.txt
-sergio:
+all:
 	rm -rf *.o *~ *.elf *.bin *.cnt *.lst *.sec *.txt;
 	make hal
 	make libc

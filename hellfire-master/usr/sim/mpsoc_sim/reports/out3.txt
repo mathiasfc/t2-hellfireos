@@ -1,0 +1,441 @@
+
+KERNEL: booting...
+===========================================================
+HellfireOS v2.19.03 (4.6.1) [Jun 19 2019, 01:03:30]
+Embedded Systems Group - GSE, PUCRS - [2007 - 2019]
+===========================================================
+
+arch:          mips/plasma
+sys clk:       25000 kHz
+time slice:    10480 us
+heap size:     500000 bytes
+max tasks:     30
+
+HAL: _vm_init()
+HAL: _sched_init()
+HAL: _timer_init()
+HAL: _irq_init()
+HAL: _device_init()
+KERNEL: this is core #3
+KERNEL: NoC queue init, 64 packets
+KERNEL: NoC driver registered
+HAL: _task_init()
+KERNEL: [idle task], id: 0, p:0, c:0, d:0, addr: 100002b4, sp: 100143a8, ss: 1024 bytes
+KERNEL: [Solve mazes], id: 1, p:0, c:0, d:0, addr: 10000da8, sp: 10015b20, ss: 6000 bytes
+KERNEL: free heap: 483464 bytes
+KERNEL: HellfireOS is up
+
+
+----CPU[3] - MAZE SOLVER----
+
+Não é meu Maze!
+Não é meu Maze!
+Não é meu Maze!
+[1,1] [2,1] [3,1] [4,1] [5,1] [6,1] [7,1] [7,2] [7,3] [6,3] [5,3] [5,4] [5,5] [5,6] [5,7] [6,7] [7,7] [7,6] [7,5] [8,5] [9,5] [9,6] [9,7] [9,8] [9,9] [9,10] [9,11] [9,12] [9,13] [9,14] [9,15] [8,15] [7,15] [7,14] [7,13] [7,12] [7,11] [7,10] [7,9] [6,9] [5,9] [4,9] [3,9] [3,10] [3,11] [2,11] [1,11] [1,12] [1,13] [2,13] [3,13] [4,13] [5,13] [5,14] [5,15] [4,15] [3,15] [2,15] [1,15] [1,16] [1,17] [2,17] [3,17] [4,17] [5,17] [5,18] [5,19] [6,19] [7,19] [8,19] [9,19] 
+OK! Maze 3 resolvido por CPU[3]
+
+Tempo de execução: 0.47 segundos
+Não é meu Maze!
+Não é meu Maze!
+Não é meu Maze!
+Não é meu Maze!
+Não é meu Maze!
+Não é meu Maze!
+Não é meu Maze!
+Não é meu Maze!
+Não é meu Maze!
+Não é meu Maze!
+Não é meu Maze!
+
+summary: 1 mazes were solved
+
+
+----CPU[3] - MAZE SOLVER----
+
+Não é meu Maze!
+Não é meu Maze!
+Não é meu Maze!
+[1,1] [2,1] [3,1] [4,1] [5,1] [6,1] [7,1] [7,2] [7,3] [6,3] [5,3] [5,4] [5,5] [5,6] [5,7] [6,7] [7,7] [7,6] [7,5] [8,5] [9,5] [9,6] [9,7] [9,8] [9,9] [9,10] [9,11] [9,12] [9,13] [9,14] [9,15] [8,15] [7,15] [7,14] [7,13] [7,12] [7,11] [7,10] [7,9] [6,9] [5,9] [4,9] [3,9] [3,10] [3,11] [2,11] [1,11] [1,12] [1,13] [2,13] [3,13] [4,13] [5,13] [5,14] [5,15] [4,15] [3,15] [2,15] [1,15] [1,16] [1,17] [2,17] [3,17] [4,17] [5,17] [5,18] [5,19] [6,19] [7,19] [8,19] [9,19] 
+OK! Maze 3 resolvido por CPU[3]
+
+Tempo de execução: 0.58 segundos
+Não é meu Maze!
+Não é meu Maze!
+Não é meu Maze!
+Não é meu Maze!
+Não é meu Maze!
+Não é meu Maze!
+Não é meu Maze!
+Não é meu Maze!
+Não é meu Maze!
+Não é meu Maze!
+Não é meu Maze!
+
+summary: 1 mazes were solved
+
+
+----CPU[3] - MAZE SOLVER----
+
+Não é meu Maze!
+Não é meu Maze!
+Não é meu Maze!
+[1,1] [2,1] [3,1] [4,1] [5,1] [6,1] [7,1] [7,2] [7,3] [6,3] [5,3] [5,4] [5,5] [5,6] [5,7] [6,7] [7,7] [7,6] [7,5] [8,5] [9,5] [9,6] [9,7] [9,8] [9,9] [9,10] [9,11] [9,12] [9,13] [9,14] [9,15] [8,15] [7,15] [7,14] [7,13] [7,12] [7,11] [7,10] [7,9] [6,9] [5,9] [4,9] [3,9] [3,10] [3,11] [2,11] [1,11] [1,12] [1,13] [2,13] [3,13] [4,13] [5,13] [5,14] [5,15] [4,15] [3,15] [2,15] [1,15] [1,16] [1,17] [2,17] [3,17] [4,17] [5,17] [5,18] [5,19] [6,19] [7,19] [8,19] [9,19] 
+OK! Maze 3 resolvido por CPU[3]
+
+Tempo de execução: 0.47 segundos
+Não é meu Maze!
+Não é meu Maze!
+Não é meu Maze!
+Não é meu Maze!
+Não é meu Maze!
+Não é meu Maze!
+Não é meu Maze!
+Não é meu Maze!
+Não é meu Maze!
+Não é meu Maze!
+Não é meu Maze!
+
+summary: 1 mazes were solved
+
+
+----CPU[3] - MAZE SOLVER----
+
+Não é meu Maze!
+Não é meu Maze!
+Não é meu Maze!
+[1,1] [2,1] [3,1] [4,1] [5,1] [6,1] [7,1] [7,2] [7,3] [6,3] [5,3] [5,4] [5,5] [5,6] [5,7] [6,7] [7,7] [7,6] [7,5] [8,5] [9,5] [9,6] [9,7] [9,8] [9,9] [9,10] [9,11] [9,12] [9,13] [9,14] [9,15] [8,15] [7,15] [7,14] [7,13] [7,12] [7,11] [7,10] [7,9] [6,9] [5,9] [4,9] [3,9] [3,10] [3,11] [2,11] [1,11] [1,12] [1,13] [2,13] [3,13] [4,13] [5,13] [5,14] [5,15] [4,15] [3,15] [2,15] [1,15] [1,16] [1,17] [2,17] [3,17] [4,17] [5,17] [5,18] [5,19] [6,19] [7,19] [8,19] [9,19] 
+OK! Maze 3 resolvido por CPU[3]
+
+Tempo de execução: 0.58 segundos
+Não é meu Maze!
+Não é meu Maze!
+Não é meu Maze!
+Não é meu Maze!
+Não é meu Maze!
+Não é meu Maze!
+Não é meu Maze!
+Não é meu Maze!
+Não é meu Maze!
+Não é meu Maze!
+Não é meu Maze!
+
+summary: 1 mazes were solved
+
+
+----CPU[3] - MAZE SOLVER----
+
+Não é meu Maze!
+Não é meu Maze!
+Não é meu Maze!
+[1,1] [2,1] [3,1] [4,1] [5,1] [6,1] [7,1] [7,2] [7,3] [6,3] [5,3] [5,4] [5,5] [5,6] [5,7] [6,7] [7,7] [7,6] [7,5] [8,5] [9,5] [9,6] [9,7] [9,8] [9,9] [9,10] [9,11] [9,12] [9,13] [9,14] [9,15] [8,15] [7,15] [7,14] [7,13] [7,12] [7,11] [7,10] [7,9] [6,9] [5,9] [4,9] [3,9] [3,10] [3,11] [2,11] [1,11] [1,12] [1,13] [2,13] [3,13] [4,13] [5,13] [5,14] [5,15] [4,15] [3,15] [2,15] [1,15] [1,16] [1,17] [2,17] [3,17] [4,17] [5,17] [5,18] [5,19] [6,19] [7,19] [8,19] [9,19] 
+OK! Maze 3 resolvido por CPU[3]
+
+Tempo de execução: 0.47 segundos
+Não é meu Maze!
+Não é meu Maze!
+Não é meu Maze!
+Não é meu Maze!
+Não é meu Maze!
+Não é meu Maze!
+Não é meu Maze!
+Não é meu Maze!
+Não é meu Maze!
+Não é meu Maze!
+Não é meu Maze!
+
+summary: 1 mazes were solved
+
+
+----CPU[3] - MAZE SOLVER----
+
+Não é meu Maze!
+Não é meu Maze!
+Não é meu Maze!
+[1,1] [2,1] [3,1] [4,1] [5,1] [6,1] [7,1] [7,2] [7,3] [6,3] [5,3] [5,4] [5,5] [5,6] [5,7] [6,7] [7,7] [7,6] [7,5] [8,5] [9,5] [9,6] [9,7] [9,8] [9,9] [9,10] [9,11] [9,12] [9,13] [9,14] [9,15] [8,15] [7,15] [7,14] [7,13] [7,12] [7,11] [7,10] [7,9] [6,9] [5,9] [4,9] [3,9] [3,10] [3,11] [2,11] [1,11] [1,12] [1,13] [2,13] [3,13] [4,13] [5,13] [5,14] [5,15] [4,15] [3,15] [2,15] [1,15] [1,16] [1,17] [2,17] [3,17] [4,17] [5,17] [5,18] [5,19] [6,19] [7,19] [8,19] [9,19] 
+OK! Maze 3 resolvido por CPU[3]
+
+Tempo de execução: 0.47 segundos
+Não é meu Maze!
+Não é meu Maze!
+Não é meu Maze!
+Não é meu Maze!
+Não é meu Maze!
+Não é meu Maze!
+Não é meu Maze!
+Não é meu Maze!
+Não é meu Maze!
+Não é meu Maze!
+Não é meu Maze!
+
+summary: 1 mazes were solved
+
+
+----CPU[3] - MAZE SOLVER----
+
+Não é meu Maze!
+Não é meu Maze!
+Não é meu Maze!
+[1,1] [2,1] [3,1] [4,1] [5,1] [6,1] [7,1] [7,2] [7,3] [6,3] [5,3] [5,4] [5,5] [5,6] [5,7] [6,7] [7,7] [7,6] [7,5] [8,5] [9,5] [9,6] [9,7] [9,8] [9,9] [9,10] [9,11] [9,12] [9,13] [9,14] [9,15] [8,15] [7,15] [7,14] [7,13] [7,12] [7,11] [7,10] [7,9] [6,9] [5,9] [4,9] [3,9] [3,10] [3,11] [2,11] [1,11] [1,12] [1,13] [2,13] [3,13] [4,13] [5,13] [5,14] [5,15] [4,15] [3,15] [2,15] [1,15] [1,16] [1,17] [2,17] [3,17] [4,17] [5,17] [5,18] [5,19] [6,19] [7,19] [8,19] [9,19] 
+OK! Maze 3 resolvido por CPU[3]
+
+Tempo de execução: 0.58 segundos
+Não é meu Maze!
+Não é meu Maze!
+Não é meu Maze!
+Não é meu Maze!
+Não é meu Maze!
+Não é meu Maze!
+Não é meu Maze!
+Não é meu Maze!
+Não é meu Maze!
+Não é meu Maze!
+Não é meu Maze!
+
+summary: 1 mazes were solved
+
+
+----CPU[3] - MAZE SOLVER----
+
+Não é meu Maze!
+Não é meu Maze!
+Não é meu Maze!
+[1,1] [2,1] [3,1] [4,1] [5,1] [6,1] [7,1] [7,2] [7,3] [6,3] [5,3] [5,4] [5,5] [5,6] [5,7] [6,7] [7,7] [7,6] [7,5] [8,5] [9,5] [9,6] [9,7] [9,8] [9,9] [9,10] [9,11] [9,12] [9,13] [9,14] [9,15] [8,15] [7,15] [7,14] [7,13] [7,12] [7,11] [7,10] [7,9] [6,9] [5,9] [4,9] [3,9] [3,10] [3,11] [2,11] [1,11] [1,12] [1,13] [2,13] [3,13] [4,13] [5,13] [5,14] [5,15] [4,15] [3,15] [2,15] [1,15] [1,16] [1,17] [2,17] [3,17] [4,17] [5,17] [5,18] [5,19] [6,19] [7,19] [8,19] [9,19] 
+OK! Maze 3 resolvido por CPU[3]
+
+Tempo de execução: 0.47 segundos
+Não é meu Maze!
+Não é meu Maze!
+Não é meu Maze!
+Não é meu Maze!
+Não é meu Maze!
+Não é meu Maze!
+Não é meu Maze!
+Não é meu Maze!
+Não é meu Maze!
+Não é meu Maze!
+Não é meu Maze!
+
+summary: 1 mazes were solved
+
+
+----CPU[3] - MAZE SOLVER----
+
+Não é meu Maze!
+Não é meu Maze!
+Não é meu Maze!
+[1,1] [2,1] [3,1] [4,1] [5,1] [6,1] [7,1] [7,2] [7,3] [6,3] [5,3] [5,4] [5,5] [5,6] [5,7] [6,7] [7,7] [7,6] [7,5] [8,5] [9,5] [9,6] [9,7] [9,8] [9,9] [9,10] [9,11] [9,12] [9,13] [9,14] [9,15] [8,15] [7,15] [7,14] [7,13] [7,12] [7,11] [7,10] [7,9] [6,9] [5,9] [4,9] [3,9] [3,10] [3,11] [2,11] [1,11] [1,12] [1,13] [2,13] [3,13] [4,13] [5,13] [5,14] [5,15] [4,15] [3,15] [2,15] [1,15] [1,16] [1,17] [2,17] [3,17] [4,17] [5,17] [5,18] [5,19] [6,19] [7,19] [8,19] [9,19] 
+OK! Maze 3 resolvido por CPU[3]
+
+Tempo de execução: 0.58 segundos
+Não é meu Maze!
+Não é meu Maze!
+Não é meu Maze!
+Não é meu Maze!
+Não é meu Maze!
+Não é meu Maze!
+Não é meu Maze!
+Não é meu Maze!
+Não é meu Maze!
+Não é meu Maze!
+Não é meu Maze!
+
+summary: 1 mazes were solved
+
+
+----CPU[3] - MAZE SOLVER----
+
+Não é meu Maze!
+Não é meu Maze!
+Não é meu Maze!
+[1,1] [2,1] [3,1] [4,1] [5,1] [6,1] [7,1] [7,2] [7,3] [6,3] [5,3] [5,4] [5,5] [5,6] [5,7] [6,7] [7,7] [7,6] [7,5] [8,5] [9,5] [9,6] [9,7] [9,8] [9,9] [9,10] [9,11] [9,12] [9,13] [9,14] [9,15] [8,15] [7,15] [7,14] [7,13] [7,12] [7,11] [7,10] [7,9] [6,9] [5,9] [4,9] [3,9] [3,10] [3,11] [2,11] [1,11] [1,12] [1,13] [2,13] [3,13] [4,13] [5,13] [5,14] [5,15] [4,15] [3,15] [2,15] [1,15] [1,16] [1,17] [2,17] [3,17] [4,17] [5,17] [5,18] [5,19] [6,19] [7,19] [8,19] [9,19] 
+OK! Maze 3 resolvido por CPU[3]
+
+Tempo de execução: 0.47 segundos
+Não é meu Maze!
+Não é meu Maze!
+Não é meu Maze!
+Não é meu Maze!
+Não é meu Maze!
+Não é meu Maze!
+Não é meu Maze!
+Não é meu Maze!
+Não é meu Maze!
+Não é meu Maze!
+Não é meu Maze!
+
+summary: 1 mazes were solved
+
+
+----CPU[3] - MAZE SOLVER----
+
+Não é meu Maze!
+Não é meu Maze!
+Não é meu Maze!
+[1,1] [2,1] [3,1] [4,1] [5,1] [6,1] [7,1] [7,2] [7,3] [6,3] [5,3] [5,4] [5,5] [5,6] [5,7] [6,7] [7,7] [7,6] [7,5] [8,5] [9,5] [9,6] [9,7] [9,8] [9,9] [9,10] [9,11] [9,12] [9,13] [9,14] [9,15] [8,15] [7,15] [7,14] [7,13] [7,12] [7,11] [7,10] [7,9] [6,9] [5,9] [4,9] [3,9] [3,10] [3,11] [2,11] [1,11] [1,12] [1,13] [2,13] [3,13] [4,13] [5,13] [5,14] [5,15] [4,15] [3,15] [2,15] [1,15] [1,16] [1,17] [2,17] [3,17] [4,17] [5,17] [5,18] [5,19] [6,19] [7,19] [8,19] [9,19] 
+OK! Maze 3 resolvido por CPU[3]
+
+Tempo de execução: 0.47 segundos
+Não é meu Maze!
+Não é meu Maze!
+Não é meu Maze!
+Não é meu Maze!
+Não é meu Maze!
+Não é meu Maze!
+Não é meu Maze!
+Não é meu Maze!
+Não é meu Maze!
+Não é meu Maze!
+Não é meu Maze!
+
+summary: 1 mazes were solved
+
+
+----CPU[3] - MAZE SOLVER----
+
+Não é meu Maze!
+Não é meu Maze!
+Não é meu Maze!
+[1,1] [2,1] [3,1] [4,1] [5,1] [6,1] [7,1] [7,2] [7,3] [6,3] [5,3] [5,4] [5,5] [5,6] [5,7] [6,7] [7,7] [7,6] [7,5] [8,5] [9,5] [9,6] [9,7] [9,8] [9,9] [9,10] [9,11] [9,12] [9,13] [9,14] [9,15] [8,15] [7,15] [7,14] [7,13] [7,12] [7,11] [7,10] [7,9] [6,9] [5,9] [4,9] [3,9] [3,10] [3,11] [2,11] [1,11] [1,12] [1,13] [2,13] [3,13] [4,13] [5,13] [5,14] [5,15] [4,15] [3,15] [2,15] [1,15] [1,16] [1,17] [2,17] [3,17] [4,17] [5,17] [5,18] [5,19] [6,19] [7,19] [8,19] [9,19] 
+OK! Maze 3 resolvido por CPU[3]
+
+Tempo de execução: 0.58 segundos
+Não é meu Maze!
+Não é meu Maze!
+Não é meu Maze!
+Não é meu Maze!
+Não é meu Maze!
+Não é meu Maze!
+Não é meu Maze!
+Não é meu Maze!
+Não é meu Maze!
+Não é meu Maze!
+Não é meu Maze!
+
+summary: 1 mazes were solved
+
+
+----CPU[3] - MAZE SOLVER----
+
+Não é meu Maze!
+Não é meu Maze!
+Não é meu Maze!
+[1,1] [2,1] [3,1] [4,1] [5,1] [6,1] [7,1] [7,2] [7,3] [6,3] [5,3] [5,4] [5,5] [5,6] [5,7] [6,7] [7,7] [7,6] [7,5] [8,5] [9,5] [9,6] [9,7] [9,8] [9,9] [9,10] [9,11] [9,12] [9,13] [9,14] [9,15] [8,15] [7,15] [7,14] [7,13] [7,12] [7,11] [7,10] [7,9] [6,9] [5,9] [4,9] [3,9] [3,10] [3,11] [2,11] [1,11] [1,12] [1,13] [2,13] [3,13] [4,13] [5,13] [5,14] [5,15] [4,15] [3,15] [2,15] [1,15] [1,16] [1,17] [2,17] [3,17] [4,17] [5,17] [5,18] [5,19] [6,19] [7,19] [8,19] [9,19] 
+OK! Maze 3 resolvido por CPU[3]
+
+Tempo de execução: 0.47 segundos
+Não é meu Maze!
+Não é meu Maze!
+Não é meu Maze!
+Não é meu Maze!
+Não é meu Maze!
+Não é meu Maze!
+Não é meu Maze!
+Não é meu Maze!
+Não é meu Maze!
+Não é meu Maze!
+Não é meu Maze!
+
+summary: 1 mazes were solved
+
+
+----CPU[3] - MAZE SOLVER----
+
+Não é meu Maze!
+Não é meu Maze!
+Não é meu Maze!
+[1,1] [2,1] [3,1] [4,1] [5,1] [6,1] [7,1] [7,2] [7,3] [6,3] [5,3] [5,4] [5,5] [5,6] [5,7] [6,7] [7,7] [7,6] [7,5] [8,5] [9,5] [9,6] [9,7] [9,8] [9,9] [9,10] [9,11] [9,12] [9,13] [9,14] [9,15] [8,15] [7,15] [7,14] [7,13] [7,12] [7,11] [7,10] [7,9] [6,9] [5,9] [4,9] [3,9] [3,10] [3,11] [2,11] [1,11] [1,12] [1,13] [2,13] [3,13] [4,13] [5,13] [5,14] [5,15] [4,15] [3,15] [2,15] [1,15] [1,16] [1,17] [2,17] [3,17] [4,17] [5,17] [5,18] [5,19] [6,19] [7,19] [8,19] [9,19] 
+OK! Maze 3 resolvido por CPU[3]
+
+Tempo de execução: 0.58 segundos
+Não é meu Maze!
+Não é meu Maze!
+Não é meu Maze!
+Não é meu Maze!
+Não é meu Maze!
+Não é meu Maze!
+Não é meu Maze!
+Não é meu Maze!
+Não é meu Maze!
+Não é meu Maze!
+Não é meu Maze!
+
+summary: 1 mazes were solved
+
+
+----CPU[3] - MAZE SOLVER----
+
+Não é meu Maze!
+Não é meu Maze!
+Não é meu Maze!
+[1,1] [2,1] [3,1] [4,1] [5,1] [6,1] [7,1] [7,2] [7,3] [6,3] [5,3] [5,4] [5,5] [5,6] [5,7] [6,7] [7,7] [7,6] [7,5] [8,5] [9,5] [9,6] [9,7] [9,8] [9,9] [9,10] [9,11] [9,12] [9,13] [9,14] [9,15] [8,15] [7,15] [7,14] [7,13] [7,12] [7,11] [7,10] [7,9] [6,9] [5,9] [4,9] [3,9] [3,10] [3,11] [2,11] [1,11] [1,12] [1,13] [2,13] [3,13] [4,13] [5,13] [5,14] [5,15] [4,15] [3,15] [2,15] [1,15] [1,16] [1,17] [2,17] [3,17] [4,17] [5,17] [5,18] [5,19] [6,19] [7,19] [8,19] [9,19] 
+OK! Maze 3 resolvido por CPU[3]
+
+Tempo de execução: 0.47 segundos
+Não é meu Maze!
+Não é meu Maze!
+Não é meu Maze!
+Não é meu Maze!
+Não é meu Maze!
+Não é meu Maze!
+Não é meu Maze!
+Não é meu Maze!
+Não é meu Maze!
+Não é meu Maze!
+Não é meu Maze!
+
+summary: 1 mazes were solved
+
+
+----CPU[3] - MAZE SOLVER----
+
+Não é meu Maze!
+Não é meu Maze!
+Não é meu Maze!
+[1,1] [2,1] [3,1] [4,1] [5,1] [6,1] [7,1] [7,2] [7,3] [6,3] [5,3] [5,4] [5,5] [5,6] [5,7] [6,7] [7,7] [7,6] [7,5] [8,5] [9,5] [9,6] [9,7] [9,8] [9,9] [9,10] [9,11] [9,12] [9,13] [9,14] [9,15] [8,15] [7,15] [7,14] [7,13] [7,12] [7,11] [7,10] [7,9] [6,9] [5,9] [4,9] [3,9] [3,10] [3,11] [2,11] [1,11] [1,12] [1,13] [2,13] [3,13] [4,13] [5,13] [5,14] [5,15] [4,15] [3,15] [2,15] [1,15] [1,16] [1,17] [2,17] [3,17] [4,17] [5,17] [5,18] [5,19] [6,19] [7,19] [8,19] [9,19] 
+OK! Maze 3 resolvido por CPU[3]
+
+Tempo de execução: 0.47 segundos
+Não é meu Maze!
+Não é meu Maze!
+Não é meu Maze!
+Não é meu Maze!
+Não é meu Maze!
+Não é meu Maze!
+Não é meu Maze!
+Não é meu Maze!
+Não é meu Maze!
+Não é meu Maze!
+Não é meu Maze!
+
+summary: 1 mazes were solved
+
+
+----CPU[3] - MAZE SOLVER----
+
+Não é meu Maze!
+Não é meu Maze!
+Não é meu Maze!
+[1,1] [2,1] [3,1] [4,1] [5,1] [6,1] [7,1] [7,2] [7,3] [6,3] [5,3] [5,4] [5,5] [5,6] [5,7] [6,7] [7,7] [7,6] [7,5] [8,5] [9,5] [9,6] [9,7] [9,8] [9,9] [9,10] [9,11] [9,12] [9,13] [9,14] [9,15] [8,15] [7,15] [7,14] [7,13] [7,12] [7,11] [7,10] [7,9] [6,9] [5,9] [4,9] [3,9] [3,10] [3,11] [2,11] [1,11] [1,12] [1,13] [2,13] [3,13] [4,13] [5,13] [5,14] [5,15] [4,15] [3,15] [2,15] [1,15] [1,16] [1,17] [2,17] [3,17] [4,17] [5,17] [5,18] [5,19] [6,19] [7,19] [8,19] [9,19] 
+OK! Maze 3 resolvido por CPU[3]
+
+Tempo de execução: 0.58 segundos
+Não é meu Maze!
+Não é meu Maze!
+Não é meu Maze!
+Não é meu Maze!
+Não é meu Maze!
+Não é meu Maze!
+Não é meu Maze!
+Não é meu Maze!
+Não é meu Maze!
+Não é meu Maze!
+Não é meu Maze!
+
+summary: 1 mazes were solved
+
+
+----CPU[3] - MAZE SOLVER----
+
+Não é meu Maze!
+Não é meu Maze!
+Não é meu Maze!
